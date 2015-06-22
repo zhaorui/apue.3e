@@ -5,15 +5,15 @@ static void	f1(int, int, int, int);
 static void	f2(void);
 
 static jmp_buf	jmpbuffer;
-static int		globval;
+static int	globval;
 
 int
 main(void)
 {
-	int				autoval;
+	int		autoval;
 	register int	regival;
 	volatile int	volaval;
-	static int		statval;
+	static int	statval;
 
 	globval = 1; autoval = 2; regival = 3; volaval = 4; statval = 5;
 

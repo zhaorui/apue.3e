@@ -2,13 +2,12 @@
 #include <setjmp.h>
 #include <time.h>
 
-static void						sig_usr1(int);
-static void						sig_alrm(int);
-static sigjmp_buf				jmpbuf;
-static volatile sig_atomic_t	canjump;
+static void sig_usr1(int);
+static void sig_alrm(int);
+static sigjmp_buf   jmpbuf;
+static volatile sig_atomic_t    canjump;
 
-int
-main(void)
+int main(void)
 {
 	if (signal(SIGUSR1, sig_usr1) == SIG_ERR)
 		err_sys("signal(SIGUSR1) error");
