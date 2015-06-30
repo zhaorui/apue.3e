@@ -21,7 +21,7 @@ ifeq "$(PLATFORM)" "solaris"
   FMEM =
 endif
 
-PROGS =	bo fifo1 getlogin goodexit longpath pendlock prtime sizepipe vfork3 zombie
+PROGS =	bo fifo1 getlogin goodexit longpath pendlock prtime sizepipe vfork3 zombie fd
 
 all:	$(PROGS) asyncsocket.o $(FMEM) openmax.o sleep.o sleepus_poll.o sleepus_select.o $(GETPW)
 

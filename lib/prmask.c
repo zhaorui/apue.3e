@@ -24,8 +24,9 @@ void pr_mask(const char *str)
                 printf(" SIGTRAP");
         if (sigismember(&sigset, SIGABRT))
                 printf(" SIGABRT");
-        if (sigismember(&sigset, SIGEMT))
-                printf(" SIGEMT");
+        /*not supported in ubuntu*/
+        /*if (sigismember(&sigset, SIGEMT))*/
+        /*       printf(" SIGEMT"); */
         if (sigismember(&sigset, SIGFPE))
                 printf(" SIGFPE");
         if (sigismember(&sigset, SIGKILL))
@@ -68,8 +69,9 @@ void pr_mask(const char *str)
                 printf(" SIGPROF");
         if (sigismember(&sigset, SIGWINCH))
                 printf(" SIGWINCH");
-        if (sigismember(&sigset, SIGINFO))
-                printf(" SIGINFO");
+        /*not supported in ubuntu*/
+        /*if (sigismember(&sigset, SIGINFO))*/
+        /*        printf(" SIGINFO");*/
         if (sigismember(&sigset, SIGUSR1))
                 printf(" SIGUSR1");
         if (sigismember(&sigset, SIGUSR2))
